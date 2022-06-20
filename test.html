@@ -23,21 +23,30 @@
         var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
         var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
 
-        // 是安卓浏览器
-        if (isAndroid) {
-          window.location.href = 'https://raw.githubusercontent.com/1241901326/apk/main/app-release.apk'; // 跳安卓端下载地址
-        }
-        // 是iOS浏览器
-        if (isIOS) {
+        // // 是安卓浏览器
+        // if (isAndroid) {
+        //   window.location.href = 'https://raw.githubusercontent.com/1241901326/apk/main/app-release.apk'; // 跳安卓端下载地址
+        // }
+        // // 是iOS浏览器
+        // if (isIOS) {
+        //   window.location.href = 'https://baidu.com';
+        //   // window.location.href =
+        //   //   "https://itunes.apple.com/cn/app/xxxxxxx/id1124348115?mt=8"; // 跳AppStore下载地址
+        // }
+
+        if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+          //alert(navigator.userAgent);
           window.location.href = 'https://baidu.com';
-          // window.location.href =
-          //   "https://itunes.apple.com/cn/app/xxxxxxx/id1124348115?mt=8"; // 跳AppStore下载地址
+        } else if (/(Android)/i.test(navigator.userAgent)) {
+          //alert(navigator.userAgent);
+          window.location.href = 'https://raw.githubusercontent.com/1241901326/apk/main/app-release.apk'; // 跳安卓端下载地址
+          alert('请点击右上角按钮, 点击使用浏览器打开!');
         }
 
         // 是微信内部webView
-        if (is_weixn() && isAndroid) {
-          alert('请点击右上角按钮, 点击使用浏览器打开!');
-        }
+        // if (is_weixn() && isAndroid) {
+        //   alert('请点击右上角按钮, 点击使用浏览器打开!');
+        // }
 
         // 是PC端
         // if (IsPC()) {
