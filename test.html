@@ -18,10 +18,10 @@
 
       // 去下载
       function goDownload() {
-        var u = navigator.userAgent,
-          app = navigator.appVersion;
-        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
-        var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+        // var u = navigator.userAgent,
+        //   app = navigator.appVersion;
+        // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
+        // var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
 
         // // 是安卓浏览器
         // if (isAndroid) {
@@ -55,27 +55,27 @@
       }
 
       // 是微信浏览器
-      function is_weixn() {
-        var ua = navigator.userAgent.toLowerCase();
-        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
-          return true;
-        } else {
-          return false;
-        }
-      }
+      // function is_weixn() {
+      //   var ua = navigator.userAgent.toLowerCase();
+      //   if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+      //     return true;
+      //   } else {
+      //     return false;
+      //   }
+      // }
 
-      function IsPC() {
-        var userAgentInfo = navigator.userAgent;
-        var Agents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod'];
-        var flag = true;
-        for (var v = 0; v < Agents.length; v++) {
-          if (userAgentInfo.indexOf(Agents[v]) > 0) {
-            flag = false;
-            break;
-          }
-        }
-        return flag;
-      }
+      // function IsPC() {
+      //   var userAgentInfo = navigator.userAgent;
+      //   var Agents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod'];
+      //   var flag = true;
+      //   for (var v = 0; v < Agents.length; v++) {
+      //     if (userAgentInfo.indexOf(Agents[v]) > 0) {
+      //       flag = false;
+      //       break;
+      //     }
+      //   }
+      //   return flag;
+      // }
     </script>
   </body>
 </html>
