@@ -36,13 +36,16 @@
         //   //   "https://itunes.apple.com/cn/app/xxxxxxx/id1124348115?mt=8"; // 跳AppStore下载地址
         // }
 
-        if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-          //alert(navigator.userAgent);
-          window.location.href = 'https://baidu.com';
-        } else if (/(Android)/i.test(navigator.userAgent)) {
-          //alert(navigator.userAgent);
+        if (is_weixn()) {
+          if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+            //alert(navigator.userAgent);
+            window.location.href = 'https://baidu.com';
+          } else if (/(Android)/i.test(navigator.userAgent)) {
+            //alert(navigator.userAgent);
+            alert('请点击右上角按钮, 点击使用浏览器打开!');
+          }
+        } else {
           window.location.href = 'https://raw.githubusercontent.com/1241901326/apk/main/app-release.apk'; // 跳安卓端下载地址
-          alert('请点击右上角按钮, 点击使用浏览器打开!');
         }
 
         // 是微信内部webView
@@ -57,14 +60,14 @@
       }
 
       // 是微信浏览器
-      // function is_weixn() {
-      //   var ua = navigator.userAgent.toLowerCase();
-      //   if (ua.match(/MicroMessenger/i) == 'micromessenger') {
-      //     return true;
-      //   } else {
-      //     return false;
-      //   }
-      // }
+      function is_weixn() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+          return true;
+        } else {
+          return false;
+        }
+      }
 
       // function IsPC() {
       //   var userAgentInfo = navigator.userAgent;
