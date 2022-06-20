@@ -40,12 +40,16 @@
           if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
             // window.location.href = 'https://baidu.com';
             alert('请点击右上角按钮, 点击使用浏览器打开!');
+            window.location.href = '/https://raw.githubusercontent.com/1241901326/apk/main/app-release.apk';
           } else if (/(Android)/i.test(navigator.userAgent)) {
             alert('请点击右上角按钮, 点击使用浏览器打开!');
+            window.location.href = '/https://raw.githubusercontent.com/1241901326/apk/main/app-release.apk';
           }
-        } else {
-          window.location.href = 'https://raw.githubusercontent.com/1241901326/apk/main/app-release.apk'; // 跳安卓端下载地址
         }
+        //  else {
+        //   https://htmlpreview.github.io/?https://raw.githubusercontent.com/1241901326/apk/main/test.html
+        //   window.location.href = '/https://raw.githubusercontent.com/1241901326/apk/main/app-release.apk'; // 跳安卓端下载地址
+        // }
 
         // 是微信内部webView
         // if (is_weixn() && isAndroid) {
